@@ -55,7 +55,7 @@ class DestinoController extends Controller
 
 
     public function edit($id) {
-        $destno = Destino::find($id);
+        $destino = Destino::find($id);
 
         return view('destino.edit', compact('destino'));
     }

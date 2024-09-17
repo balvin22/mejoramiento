@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
-    // modelo padere 1 a muchos
+    // modelo padrre 1 a muchos
     public function proyectos(){
         return $this->hasMany(Proyecto::class);
     }

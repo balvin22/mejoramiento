@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\DestinoController;
+use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\JugadorController;
 use App\Http\Controllers\PresidenteController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ViajeroController;
 use Illuminate\Support\Facades\Route;
+use Psy\Command\EditCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,5 +73,12 @@ Route::get('destino/{id}',[DestinoController::class,'show'])->name('destino.show
 Route::put('destino/{id}',[DestinoController::class,'update'])->name('destino.update');
 Route::delete('destino/{id}',[DestinoController::class,'destroy'])->name('destino.destroy');
 Route::get('destino/{id}/edit',[DestinoController::class,'edit'])->name('destino.edit');
-
+// ruta equipo
+Route::get('equipo',[EquipoController::class,'inicio']);
+Route::post('equipo',[EquipoController::class,'store'])->name('equipo.store');
+Route::get('equipo/index',[EquipoController::class,'index'])->name('equipo.index');
+Route::get('equipo/{id}',[EquipoController::class,'show'])->name('equipo.shoe');
+Route::put('equipo/{id}',[EquipoController::class,'update'])->name('equipo.update');
+Route::delete('equipo/{id}',[EquipoController::class,'destroy'])->name('equipo.destroy');
+Route::get('equipo/{id}/edit',[EquipoController::class,'edit'])->name('equipo.edit');
 
